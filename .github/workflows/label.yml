@@ -6,11 +6,16 @@
 # https://github.com/actions/labeler/blob/master/README.md
 
 name: Labeler
-on: [pull_request]
+
+on:
+  pull_request:
+    branches: [ master ]
+  check_run:
+    branches: [ master ]
 
 jobs:
   label:
-
+    name: Label
     runs-on: ubuntu-latest
 
     steps:
