@@ -1,0 +1,36 @@
+name: Linting
+
+on:
+  pull_request:
+    branches: [ master ]
+  check_run:
+    branches: [ master ]
+
+jobs:
+  run-linters:
+    name: Run linters
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.8
+
+      - name: Install Python dependencies
+        run: |
+          python3 -m venv env
+          pip install -r requirements.txt
+
+      - name: Run linters
+        uses: samuelmeuli/lint-action@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # Enable linters
+          black: true
+          black_dir: code/
+          flake8: true
+          flake8_dir: code/
