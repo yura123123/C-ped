@@ -1,7 +1,0 @@
-Backend:
-  - code/
-
-Frontend:
-  - ./**/*.js
-  - ./**/*.html
-  - ./**/*.css
