@@ -1,4 +1,8 @@
 linters:
   flake8:
-  black:
+    fixer: true
   csslint:
+    fixer: true
+
+fixers:
+    enable: true
