@@ -3,6 +3,12 @@ linters:
     fixer: true
   csslint:
     fixer: true
+  eslint:
+    fixer: true
+
+files:
+    ignore:
+      - 'static/socket.io/socket.io.js'
 
 fixers:
     enable: true
