@@ -4,19 +4,21 @@ from flask import Flask, render_template, send_from_directory
 from flask_socketio import SocketIO
 
 
-def main():
+def main(CFG):
     # The path to directory this code is ran in.
     CUR_PATH = path.dirname(path.abspath(__file__))
 
+    server_CFG = CFG["Server"]
+
     # The IP to run server on.
-    IP = "0.0.0.0"
+    IP = server_CFG.get("ip", "0.0.0.0")
     # The port on which server is hosted.
-    PORT = 8080
+    PORT = server_CFG.getint("port", 8080)
     # !!! FUN !!! DEBUG MODE. Gives access to most stuff on server,
     # very dangerous to be put on production.
-    DEBUG = False
+    DEBUG = server_CFG.getboolean("debug", False)
     # Secret key used to encrypt requests and stuff.
-    SECRET_KEY = "SECRET KEY TO PUT IN CONFIG AND STUFF"
+    SECRET_KEY = server_CFG.get("secret_key")
 
     # The directory with all web-related templates.
     template_dir = path.join(CUR_PATH, "../templates")

@@ -3,10 +3,14 @@ from traceback import print_exception
 
 from server import main as run_server
 
+from config import CFG, CFG_Exception
+
 
 def run():
+    if CFG == "Error":
+        raise CFG_Exception("Internal error setting up config.")
     # see server.py for more detail, all server-related stuff is handled there.
-    run_server()
+    run_server(CFG)
 
 
 if __name__ == "__main__":

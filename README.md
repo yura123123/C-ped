@@ -4,6 +4,8 @@
 ## Table of contents
 * [Project's goal](#project's-goal)
 * [Technologies](#technologies)
+* [Setting up a server](#server-setup)
+* [Contacts](#contacts)
 
 ## Project's goal.
 
@@ -17,6 +19,10 @@ If done properly, such a project might save up a lot of time on development, by 
 
 (Also see requirements.txt)
  
- ## Contact
+## Setting up a server.
+
+To properly set up a server you should navigate to /config/example and move all files from there out to /config, then run code/\_\_run.py.
+
+## Contacts
 
 Created by [@Team A](https://github.com/Get-Us-A-Mentor-Or-Something) - feel free to contact any of us!
