@@ -51,6 +51,9 @@ def generate_default():
         "ip": "0.0.0.0",
         "port": 8080,
         "debug": False,
+        # Use -1 to have no max count.
+        "max_client_count": -1,
+        "max_clients_per_ip": 1,
     }
     with open(config_example_filepath, "w") as config_file:
         gen_CFG.write(config_file)
