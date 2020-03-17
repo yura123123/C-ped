@@ -1,6 +1,8 @@
 code/__pycache__
-venv/
+static/cert
+database
+venv
 # Ignore the config path, but not /example subpath.
 # To set up server, user should move all configs from example to /config.
 config/*
-!config/example/
+!config/example

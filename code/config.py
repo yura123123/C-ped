@@ -55,6 +55,10 @@ def generate_default():
         "max_client_count": -1,
         "max_clients_per_ip": 1,
     }
+    gen_CFG["Google_Authorization"] = {
+        "google_client_id": "None",
+        "google_client_secret": "None",
+    }
     with open(config_example_filepath, "w") as config_file:
         gen_CFG.write(config_file)
 
