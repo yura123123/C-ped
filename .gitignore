@@ -1,7 +1,10 @@
-code/__pycache__
-static/cert
-database
-venv
+Flask/code/__pycache__
+Flask/static/cert
+Flask/database
+Flask/venv
+
+Sandbox/server/node_modules
+
 # Ignore the config path, but not /example subpath.
 # To set up server, user should move all configs from example to /config.
 config/*

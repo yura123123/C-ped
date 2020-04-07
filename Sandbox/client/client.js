@@ -1,0 +1,3 @@
+/*
+	Here will lie any special Sandbox client code for API access.
+*/

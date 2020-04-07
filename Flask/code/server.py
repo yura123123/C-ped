@@ -19,7 +19,7 @@ from flask_login import (
 )
 from flask_socketio import SocketIO, disconnect
 
-from authorization import setup_authorization, is_authorized
+from authorization import setup_authorization, is_authenticated
 from client import Client
 
 
@@ -42,7 +42,7 @@ def main(CFG):
     # The IP to run server on.
     IP = server_CFG.get("ip", "0.0.0.0")
     # The port on which server is hosted.
-    PORT = server_CFG.getint("port", 8080)
+    PORT = server_CFG.getint("webserver_port", 8080)
     # !!! FUN !!! DEBUG MODE. Gives access to most stuff on server,
     # very dangerous to be put on production.
     DEBUG = server_CFG.getboolean("debug", False)
@@ -105,7 +105,7 @@ def main(CFG):
 
     @app.route("/me")
     def me():
-        if is_authorized(session, request):
+        if is_authenticated(session, request):
             return (
                 "<p>Hello, {}! You're logged in! Email: {}</p>"
                 "<div><p>Google Profile Picture:</p>"

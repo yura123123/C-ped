@@ -1,0 +1,36 @@
+{
+  "name": "sandbox",
+  "version": "0.0.0",
+  "description": "The solution to all your insecure internet code running needs you never even thought of using.",
+  "main": "server.js",
+  "dependencies": {
+    "configparser": "^0.3.6",
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0",
+    "socketio": "^1.0.0",
+    "truncate-utf8-bytes": "^1.0.2",
+    "xss": "^1.0.6"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Get-Us-A-Mentor-Or-Something/C-ped.git"
+  },
+  "keywords": [
+    "automation",
+    "solution searching"
+  ],
+  "author": "Get-Us-A-Mentor-Or-Something",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Get-Us-A-Mentor-Or-Something/C-ped/issues"
+  },
+  "homepage": "https://github.com/Get-Us-A-Mentor-Or-Something/C-ped#readme"
+}
