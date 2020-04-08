@@ -11,7 +11,7 @@
 
 ## Project's goal
 
-The goal of this project is to create a web-service capable of finding code by tags, that satisfies given test cases.
+The goal of this project is to create a web-service capable of finding code by a search query, that satisfies given test cases.
 
 If done properly, such a project might save up a lot of time on development, by giving out good solutions to common, formulated requests.
 
