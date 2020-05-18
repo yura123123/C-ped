@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Project</title>
+    <link rel="stylesheet" href="../css/registration.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <style>
+      html { overflow:  hidden; }
+      /* .invert { filter: invert(1);} */
+    </style>
+  </head>
+  <body >
+    <div id="particles-js" class="invert"></div>  
+    <nav>
+      <ul>
+        <li><a href="../index.html">Search</a></li>
+        <li><a href="../index.html">Test</a></li>
+        <li><a href="../index.html">Result</a></li>
+
+        <!-- <li><a href="html/registration.html">Login</a></li> -->
+        <!-- <li>
+          <label>
+            <input type="checkbox" name="checkboxName" class="checkbox" />
+            <div class="switch"></div>
+          </label>
+        </li> -->
+      </ul>
+    </nav>  
+
+
+      <div class="header"></div>
+      <div class="container" id="container">
+          <div class="form-container sign-up-container">
+              <form action="../index.html">
+                  <h1>Create Account</h1>
+                  <div class="social-container">
+                      <a href="../index.html" class="social"><i class="facebook"></i></a>
+                      <a href="#" class="social"><i class="google"></i></a>
+                      <a href="#" class="social"><i class="linkedin"></i></a>
+                  </div>
+                  <span>or use your email for registration</span>
+                  <input type="text" placeholder="Name" />
+                  <input type="email" placeholder="Email" />
+                  <input type="password" placeholder="Password" />
+                  <a href="../index.html" class="next_el">
+                    <button class="learn-more">
+                      <div class="circle">
+                        <span class="icon arrow"></span>
+                      </div>
+                      <p class="button-text">C O N T I N U E</p>
+                    </button>
+                  </a>
+              </form>
+          </div>
+          <div class="form-container sign-in-container">
+              <form action="../index.html">
+                  <h1>Sign in</h1>
+                  <div class="social-container">
+                    <a href="#" class="social"><i class="facebook"></i></a>
+                    <a href="#" class="social"><i class="google"></i></a>
+                    <a href="#" class="social"><i class="linkedin"></i></a>
+                  </div>
+                  <span>or use your account</span>
+                  <input type="email" placeholder="Email" />
+                  <input type="password" placeholder="Password" />
+                  <a href="#">Forgot your password?</a>
+                  <a href="../index.html" class="next_el">
+                    <button class="learn-more">
+                      <div class="circle">
+                        <span class="icon arrow"></span>
+                      </div>
+                      <p class="button-text">C O N T I N U E</p>
+                    </button>
+                  </a>
+              </form>
+          </div>
+          <div class="overlay-container">
+              <div class="overlay">
+                  <div class="overlay-panel overlay-left">
+                      <h1>Welcome Back!</h1>
+                      <p>To keep connected with us please login with your personal info</p>
+                      <button class="btn" class="ghost" id="signIn">Sign In</button>
+                  </div>
+                  <div class="overlay-panel overlay-right">
+                      <h1>Hello, Friend!</h1>
+                      <p>Enter your personal details and start journey with us</p>
+                      <button class="btn" class="ghost" id="signUp">Sign Up</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      
+</div>  
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="../js/sidebar.js"></script>
+
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="../js/registration.js"></script>
+  </body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Solver</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		html {
+		  overflow-x: hidden;
+		}
+	  </style>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/sidebar.css">
+	<link rel="stylesheet" type="text/css" href="css/fontawesome/all.css">
+	<script src="js/helpers.js"></script>
+	<script src="js/loader.js"></script>
+	
+</head>
+<body class="search">
+	<div class="page-wrapper chiller-theme toggled">
+
+	<a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
+		<i class="fas fa-bars"></i>
+	  </a>
+	  <nav id="sidebar" class="sidebar-wrapper">
+		<div class="sidebar-content">
+		  <div class="sidebar-brand">
+			<a href="html/registration.html">Login</a>
+			<div id="close-sidebar">
+			  <i class="fas fa-times"></i>
+			</div>
+		  </div>
+		  <div class="sidebar-header">
+			<div class="user-pic">
+			  <img class="img-responsive img-rounded" src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg"
+				alt="User picture">
+			</div>
+			<div class="user-info">
+			  <span class="user-name">Jhon
+				<strong>Smith</strong>
+			  </span>
+			  <span class="user-role">Administrator</span>
+			  <span class="user-status">
+				<i class="fa fa-circle"></i>
+				<span>Online</span>
+			  </span>
+			</div>
+		  </div>
+
+		  <div class="sidebar-menu">
+			<ul>
+
+
+
+
+
+			  <li>
+				<a href="#">
+				  <i class="fa fa-book"></i>
+				  <span>Your solutions</span>
+				</a>
+			  </li>
+			  <li>
+				<a href="#">
+				  <i class="fa fa-calendar"></i>
+				  <span>Calendar</span>
+				</a>
+			  </li>
+			  <li>
+				<a href="#">
+				  <i class="fa fa-folder"></i>
+				  <span>Settings</span>
+				</a>
+			  </li>
+			  <li>
+				<a href="html/registration.html">
+				  <i class="fa fa-folder"></i>
+				  <span>Logout</span>
+				</a>
+			  </li>
+			</ul>
+		  </div>
+		</div>	
+	  </nav>
+
+	<template id="testcaseArgumentFieldTemplate">
+		<div class="argument">
+			<span class="shadow-text">&gt;</span>
+			<input type="text" placeholder="Add argument..." class="new-argument-input"></input>
+			<button class="only-icon delete-argument-button">
+				<i class="fas fa-times"></i>
+			</button>
+			<span title="Please, use either numbser, double-quoted strings or arrays." class="tooltip error hidden argument-error">Error!</span>
+			<span class="argument-type hidden"></span>
+		</div>
+	</template>
+	<template id="testcaseTemplate">
+		<div class="testcase">
+			<div class="in-row">
+				<h2>Testcase #<span class="testcase-number"></span></h2>
+				<button class="only-icon close-testcase-button">
+					<i class="fas fa-times"></i>
+				</button>
+			</div>
+			<div class="testcase-arguments"></div>
+			<div class="output">
+				<span class="shadow-text">&lt;</span>
+				<input type="text" placeholder="Add output..." class="testcase-output-field">
+				<span title="Please, use either numbser, double-quoted strings or arrays." class="tooltip error hidden output-error">Error!</span>
+				<span class="output-type hidden"></span>
+			</div>
+		</div>
+	</template>
+	<template id="searchResultAnswerTemplate">
+		<div class="result">
+			<a href="#" class="resultText"></a>
+			<div>
+				<span class="resultLikes"></span>
+				<i class="fas fa-heart"></i>,
+				answered at <span class="resultDate"></span>
+			</div>
+		</div>
+	</template>
+	<section id="main-container">
+		<div>
+			<h1>What is your problem?</h1>
+			<div class="in-row">
+				<input type="text" id="main-search-field" placeholder="Describe it in few words...">
+				<button id="main-search-button">
+					<i class="fas fa-search"></i>Destroy it!
+				</button>
+			</div>
+		</div>
+	</section>
+	<section id="search-options">
+		<div class="line-row text-button-row">
+			<span>
+				<span id="found-num" class="big-caption space-right"></span> possible solutions found,
+			</span>
+			<button id="found-show-all-button">
+				See them
+			</button>
+		</div>
+		<span class="testcases-caption">but you can filter them with testcases. Imagine the code you're searching for is a function. What do you expect the inputs to be?<br>The position of them doesn't matter, we'll do our best to deal with it.</span>
+		<span class="tutorial">You may type either <span title="Just type any decimal integer like 2, or float like 2.2" class="tooltip">numbers</span>, <span title="Frame your strings using &quot;doubleqoutes&quot;" class="tooltip">strings</span> or <span title="Use JSON format: [5, &quot;a&quot;] with doubleqoutes" class="tooltip">arrays</span> typed in JSON format.</span>
+		<div id="testcases-container">
+			<button id="add-testcase-button">Add another one</button>
+		</div>
+		<button id="see-filtered-button">See filtered</button>
+	</section>
+	<section id="search-results">
+		<span>
+			<span id="filtered-num" class="big-caption space-right"></span> solutions found.
+		</span>
+		<div id="results-container">
+		</div>
+	</section>
+
+</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/sidebar.js"></script>
+	<script src="js/nodesfactory.js"></script>
+</body>
+</html>

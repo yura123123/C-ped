@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Source+Sans+Pro&display=swap');
+
+body {
+  font-family: 'Source Sans Pro', serif;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: rgb(135, 67, 147);
+  text-decoration-style: dashed;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+h1, h2, h3, .big-caption {
+  font-family: 'Lato', serif;
+  font-weight: 700;
+}
+
+h1, .big-caption {
+  font-size: 2.5em;
+  margin: 40px 0;
+}
+
+.big-caption.space-right {
+  padding-right: 20px;
+}
+
+.in-row {
+  display: flex;
+  flex-direction: row;
+}
+
+input, button {
+  border: 0;
+  font: inherit;
+  border-radius: 10px;
+  transition: .3s;
+}
+
+input[type="text"] {
+  padding: 15px 15px;
+}
+
+button {
+  cursor: pointer;
+  padding: 15px 20px;
+  background: rgb(225,190,231);
+}
+
+button .fas {
+  margin-right: 15px
+}
+
+button:hover {
+  background: rgb(206,147,216);
+}
+
+button.only-icon {
+  transition: .1s;
+  opacity: 0;
+  background: none;
+  padding: 0;
+  width: 1em;
+}
+
+section {
+  width: 675px;
+  margin: auto;
+  padding-top: 100px;
+  padding-bottom: 40px;
+  transition: .1s;
+}
+
+#main-search-field {
+  width: 500px;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  padding-right: 30px;
+  background: rgb(243,229,245);
+}
+
+#main-search-button {
+  position: relative;
+  right: 20px;
+  z-index: 2;
+  width: 150px; /*a little bit of hardcoding*/
+  margin-right: -20px;
+}
+
+/*this code hides and shows blocks you need according to body class. maybe
+* not scalable solution, but it works so far.*/
+
+body.search #search-options,
+body.search #search-results,
+body.testcases #search-results {
+  display: none;
+}
+
+body.testcases #search-options,
+body.results #search-options,
+body.results #search-results {
+  display: block;
+}
+
+body.testcases #main-container, body.results #main-container {
+  margin-top: calc(-160px - 2.5em);
+}
+
+.box {
+  background: rgb(243,229,245);
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.solve {
+  width: 500px;
+}
+
+.solve .buttons {
+  margin: 20px 0;
+}
+
+.solve .buttons button {
+  margin-right: 15px;
+}
+
+.icons-text .fas {
+  color: rgb(186,104,200);
+  transform: translateY(2px);
+  padding: 0 5px;
+}
+
+.line-row {
+  display: flex;
+}
+
+.text-button-row {
+  justify-content: space-between;
+}
+
+.sparse-lines {
+  line-height: 1.8;
+}
+
+.middle-width {
+  width: 300px;
+}
+
+.testcases-caption {
+  display: block;
+  width: 500px;
+  line-height: 1.7em;
+  margin-top: -.3em;
+}
+
+span.tutorial {
+  margin: 25px 0;
+  display: block;
+}
+
+span.tooltip {
+  text-decoration: underline dashed rgb(135, 67, 147);
+}
+
+.testcase {
+  margin-right: 20px;
+  width: 320px;
+  flex-shrink: 0;
+}
+
+.testcase h2 + button {
+  margin-left: 10px;
+}
+
+.testcase:hover h2 + button {
+  opacity: 1;
+}
+
+.testcase input {
+  padding-left: 10px;
+  font-family: monospace;
+  font-size: 1.2em;
+  box-shadow: 0 -2px 0 0 inset rgb(243,229,245);
+  border-radius: 0;
+  margin-bottom: 10px;
+  width: 200px;
+}
+
+.shadow-text {
+  color: rgb(206,147,216);
+  font-family: monospace;
+  font-weight: 700;
+}
+
+.testcase span.hidden {
+  display: none;
+}
+
+.testcase input + button {
+  margin-left: calc(-1em - 10px);
+  margin-right: 20px;
+}
+
+.testcase input:hover+button, .testcase .argument button:hover, .testcase button:focus {
+  opacity: 1;
+}
+
+#testcases-container {
+  display: flex;
+  overflow-x: scroll;
+  margin-bottom: 40px;
+  align-items: flex-start;
+}
+
+#add-testcase-button {
+  flex-shrink: 0;
+  height: min-content;
+  align-self: center;
+}
+
+.result {
+  border-bottom: 1px dashed;
+  display: flex;
+  padding: 15px 0;
+  justify-content: space-between;
+}
+
+.result > div {
+  flex-shrink: 0;
+}
+
+.result .fas {
+  color: rgb(206,147,216);
+}
